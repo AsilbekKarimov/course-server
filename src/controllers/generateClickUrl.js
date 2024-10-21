@@ -23,7 +23,7 @@ exports.generateClickPaymentUrl = (req, res) => {
 
     const paymentUrl = `https://my.click.uz/services/pay/?service_id=${service_id}&merchant_id=${merchant_id}&merchant_user_id=${merchant_user_id}&transaction_param=${merchant_trans_id}&amount=${amount}&additional_param3=${course_id}&return_url=${encodeURIComponent(
         return_url
-    )}&sign_string=${sign_string}`;
+    )}`;
 
     return res.json({ paymentUrl });
 };

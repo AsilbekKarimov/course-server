@@ -81,6 +81,7 @@ exports.preparePayment = async (req, res) => {
         `${click_trans_id}${service_id}${SECRET_KEY}${merchant_trans_id}${amount}${action}${sign_time}`
       )
       .digest("hex");
+      console.log(expectedSignString)
 
     if (sign_string !== expectedSignString) {
       console.log("Invalid sign string");
